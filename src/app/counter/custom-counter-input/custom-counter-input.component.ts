@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
 import { selectTextContent } from '../state/counter.selectors';
 import { setCounter, setTextInfo } from '../state/counter.actions';
 import { TCounterState } from '../state/counter.state';
+import { TAppState } from 'src/app/state/app.state';
 
 @Component({
   selector: 'app-custom-counter-input',
@@ -17,7 +18,7 @@ export class CustomCounterInputComponent implements OnInit {
   value: string | number = '';
   customTextInfo: string = 'Here is changing text';
 
-  constructor(private store: Store<{COUNTER_KEY: TCounterState}>) { }
+  constructor(private store: Store<TAppState>) { }
 
   ngOnInit(): void {
     this.getTextContent$ = this.store.select(selectTextContent)

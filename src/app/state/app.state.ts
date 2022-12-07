@@ -3,7 +3,6 @@ import { TPostsState } from "../posts/state/posts.state";
 
 
 export interface TAppState {
-  counter: TCounterState;
-  posts: TPostsState;
-  //** <any states>
-} 
+  counter: TCounterState
+  posts: TPostsState
+}

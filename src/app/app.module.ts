@@ -8,34 +8,38 @@ import { StoreModule } from '@ngrx/store';
 import { reducers, metaReducers } from './reducers';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './shared/components/header/header.component';
-import { PostsListComponent } from './posts/posts-list/posts-list.component';
 import { appReducer } from './state/app.reducer';
+import { AddPostComponent } from './posts/add-post/add-post.component';
+import { PostsListComponent } from './posts/posts-list/posts-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     HeaderComponent,
-    PostsListComponent,
+    AddPostComponent,
+    PostsListComponent
   ],
   imports: [
     CounterModule,
+    ReactiveFormsModule,
+    // PostsModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     StoreModule.forRoot(appReducer),
-    StoreModule.forRoot(reducers, {
-      metaReducers
-    }),
+    // StoreModule.forRoot(reducers, {
+    //   metaReducers
+    // }),
     EffectsModule.forRoot([]),
     StoreDevtoolsModule.instrument({
       maxAge: 25, logOnly: !isDevMode()
     }),
   ],
-  // schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [],
   bootstrap: [AppComponent]
 })
