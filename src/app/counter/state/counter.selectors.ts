@@ -1,10 +1,10 @@
-import { TCounter } from './counter.state';
 import { createFeatureSelector, createSelector } from "@ngrx/store";
+import { TCounterState } from "./counter.state";
 
 export const COUNTER_KEY = 'counter';
 
 export const selectFeature =
-  createFeatureSelector<TCounter>(COUNTER_KEY);
+  createFeatureSelector<TCounterState>(COUNTER_KEY);
 
   export const selectCounter = createSelector(
     selectFeature,

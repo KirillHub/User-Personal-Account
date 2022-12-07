@@ -8,10 +8,10 @@ import {
   createSelector,
   MetaReducer
 } from '@ngrx/store';
-import { TCounter } from '../counter/state/counter.state';
+import { TCounterState } from '../counter/state/counter.state';
 
 export interface State {
-  [COUNTER_KEY]: TCounter;  // ['counter'] -> selectors
+  [COUNTER_KEY]: TCounterState;  // ['counter'] -> selectors
 }
 
 export const reducers: ActionReducerMap<State> = {

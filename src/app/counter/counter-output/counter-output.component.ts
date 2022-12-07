@@ -2,7 +2,7 @@ import { selectCounter } from '../state/counter.selectors';
 import { Component, Input, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { map, Observable } from 'rxjs';
-import { TCounter } from '../state/counter.state';
+import { TCounterState } from '../state/counter.state';
 
 @Component({
   selector: 'app-counter-output',
@@ -18,10 +18,9 @@ export class CounterOutputComponent implements OnInit {
   );
 
   constructor(
-    private store: Store<{ counter: TCounter }>) { }
+    private store: Store<{ counter: TCounterState }>) { }
 
   ngOnInit(): void {
     this.counter$ = this.store.select(selectCounter)
   }
 }
- 

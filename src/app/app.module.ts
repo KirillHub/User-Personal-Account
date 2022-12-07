@@ -1,5 +1,4 @@
 import { CounterModule } from './counter/counter.module';
-import { counterReducer } from './counter/state/counter.reducer';
 import { NgModule, isDevMode, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -13,6 +12,7 @@ import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './shared/components/header/header.component';
 import { PostsListComponent } from './posts/posts-list/posts-list.component';
+import { appReducer } from './state/app.reducer';
 
 @NgModule({
   declarations: [
@@ -26,12 +26,14 @@ import { PostsListComponent } from './posts/posts-list/posts-list.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    StoreModule.forRoot({ counter: counterReducer }, {}),
+    StoreModule.forRoot(appReducer),
     StoreModule.forRoot(reducers, {
       metaReducers
     }),
     EffectsModule.forRoot([]),
-    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() })
+    StoreDevtoolsModule.instrument({
+      maxAge: 25, logOnly: !isDevMode()
+    }),
   ],
   // schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [],

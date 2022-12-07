@@ -1,8 +1,8 @@
 
 import { Store } from '@ngrx/store';
 import { Component } from '@angular/core';
-import { TCounter } from '../state/counter.state';
 import { decrement, increment, reset } from '../state/counter.actions';
+import { TCounterState } from '../state/counter.state';
 
 @Component({
   selector: 'app-counter-buttons',
@@ -11,7 +11,7 @@ import { decrement, increment, reset } from '../state/counter.actions';
 })
 export class CounterButtonsComponent {
 
-  constructor(private store: Store<{counter: TCounter}>){}
+  constructor(private store: Store<{counter: TCounterState}>){}
 
   onIncrement(){
     this.store.dispatch(increment())
