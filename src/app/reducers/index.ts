@@ -1,21 +1,21 @@
-import { COUNTER_KEY } from '../components/counter/state/counter.selectors';
-import { counterReducer } from '../components/counter/state/counter.reducer';
-import { TCounter } from '../components/counter/state/counter.state';
+import { COUNTER_KEY } from '../counter/state/counter.selectors';
+import { counterReducer } from '../counter/state/counter.reducer';
 import { isDevMode } from '@angular/core';
 import {
-	ActionReducer,
-	ActionReducerMap,
-	createFeatureSelector,
-	createSelector,
-	MetaReducer
+  ActionReducer,
+  ActionReducerMap,
+  createFeatureSelector,
+  createSelector,
+  MetaReducer
 } from '@ngrx/store';
+import { TCounter } from '../counter/state/counter.state';
 
 export interface State {
-	[COUNTER_KEY]: TCounter;  // ['counter'] -> selectors
+  [COUNTER_KEY]: TCounter;  // ['counter'] -> selectors
 }
 
 export const reducers: ActionReducerMap<State> = {
-	[COUNTER_KEY]: counterReducer   // ['counter']
+  [COUNTER_KEY]: counterReducer   // ['counter']
 };
 
 

@@ -6,5 +6,5 @@ export interface TCounter {
 
 export const initialState: TCounter = {
   counter: 0,
-  textInfo: 'Something text here'
+  textInfo: 'Set counter && change this label'
 };

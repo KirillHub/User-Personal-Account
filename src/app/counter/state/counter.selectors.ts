@@ -14,3 +14,4 @@ export const selectFeature =
     selectFeature,
     state => state.textInfo
   );
+

@@ -27,7 +27,7 @@ export const counterReducer = createReducer(
 		console.log(action);
 		return {
 			...state,
-			someText: action.text
+			textInfo: action.text,
 		}
 	})
 );

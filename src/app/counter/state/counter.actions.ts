@@ -9,6 +9,7 @@ export const setCounter = createAction('[set-counter] Counter Number',
   props<{ count: number }>()
 );
 
-export const setTextInfo = createAction('[text-changer]',
+export const setTextInfo = createAction('[text-changer] Change Text Info',
   props<{ text: string }>()
 );
+

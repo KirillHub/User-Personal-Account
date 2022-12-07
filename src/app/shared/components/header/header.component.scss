@@ -1,0 +1,26 @@
+.navbar{
+  padding: 10px 20px;
+  color: gray;
+  font-size: 25px;
+  display: flex;
+  justify-content: flex-start;
+}
+.navbar-container{
+  margin-top: 17px;
+}
+.navbar-lists{
+  display: flex;
+}
+
+li{
+  list-style: none;
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.753);
+  font-weight: 400;
+  &:not(:last-child){
+    margin-right: 1em;
+  }
+  &:hover{
+    text-decoration: underline;
+  }
+}
