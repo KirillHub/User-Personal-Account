@@ -21,4 +21,7 @@ export class PostsListComponent implements OnInit {
     this.posts$ = this.store.select(selectPosts)
   }
 
+  onDeletePost(){
+    console.log();
+  }
 }

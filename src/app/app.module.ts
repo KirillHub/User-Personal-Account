@@ -14,6 +14,7 @@ import { HeaderComponent } from './shared/components/header/header.component';
 import { appReducer } from './state/app.reducer';
 import { AddPostComponent } from './posts/add-post/add-post.component';
 import { PostsListComponent } from './posts/posts-list/posts-list.component';
+import { EditPostComponent } from './posts/edit-post/edit-post.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { PostsListComponent } from './posts/posts-list/posts-list.component';
     HomeComponent,
     HeaderComponent,
     AddPostComponent,
-    PostsListComponent
+    PostsListComponent,
+    EditPostComponent
   ],
   imports: [
     CounterModule,
