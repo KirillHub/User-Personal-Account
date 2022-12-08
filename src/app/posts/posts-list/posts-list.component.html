@@ -19,6 +19,9 @@
           <td>{{post.id}}</td>
           <td>{{post.title}}</td>
           <td>{{post.description}}</td>
+          <td>
+            <a [routerLink]="['edit', post.id]" href="#" class="btn btn-primary">Edit Post</a>
+          </td>
         </tr>
       </tbody>
     </table>
