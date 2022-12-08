@@ -77,7 +77,6 @@ export class EditPostComponent implements OnInit, OnDestroy {
 
   };
 
-
   ngOnDestroy(): void {
     if (this.postSubscription) {
       this.postSubscription.unsubscribe()

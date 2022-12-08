@@ -3,6 +3,7 @@ import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { TPost } from 'src/app/models/post.model';
 import { TAppState } from 'src/app/state/app.state';
+import { deletePost } from '../state/posts.actions';
 import { selectPosts } from '../state/posts.selectors';
 
 @Component({
@@ -21,7 +22,9 @@ export class PostsListComponent implements OnInit {
     this.posts$ = this.store.select(selectPosts)
   }
 
-  onDeletePost(){
-    console.log();
+  onDeletePost(deletedPostId?: number) {
+    this.store.dispatch(deletePost({ id: deletedPostId }));
+
+    
   }
 }
