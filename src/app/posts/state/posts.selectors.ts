@@ -1,8 +1,6 @@
 import { createFeatureSelector, createSelector, props } from "@ngrx/store";
 import { TPostsState } from "./posts.state";
 
-//** later add UNIQ_KEY from 'posts' */
-
 export const POSTS_KEY = 'posts';
 
 export const selectFeature =

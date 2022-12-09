@@ -1,28 +1,30 @@
-/*
-import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from "@angular/core";
-import { FormsModule } from "@angular/forms";
+import { NgModule } from "@angular/core";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { BrowserModule } from "@angular/platform-browser";
 import { AddPostComponent } from "./add-post/add-post.component";
+import { EditPostComponent } from "./edit-post/edit-post.component";
 import { PostsListComponent } from "./posts-list/posts-list.component";
+import { PostsRoutingModule } from "./posts-routing.module";
 
 @NgModule({
   imports: [
     FormsModule,
     BrowserModule,
+    ReactiveFormsModule,
+    PostsRoutingModule
   ],
   declarations: [
     PostsListComponent,
-    AddPostComponent
+    AddPostComponent,
+    EditPostComponent
   ],
   exports: [
     PostsListComponent,
-    AddPostComponent
+    AddPostComponent,
+    EditPostComponent
   ],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 
-export class PostsModule {
+export class PostsModule { }
 
-}
 
-*/
