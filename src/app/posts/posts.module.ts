@@ -1,17 +1,20 @@
+import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
-import { BrowserModule } from "@angular/platform-browser";
+import { StoreModule } from "@ngrx/store";
 import { AddPostComponent } from "./add-post/add-post.component";
 import { EditPostComponent } from "./edit-post/edit-post.component";
 import { PostsListComponent } from "./posts-list/posts-list.component";
 import { PostsRoutingModule } from "./posts-routing.module";
+import { postsReducer } from "./state/posts.reducer";
 
 @NgModule({
   imports: [
+    CommonModule,
     FormsModule,
-    BrowserModule,
     ReactiveFormsModule,
-    PostsRoutingModule
+    PostsRoutingModule,
+    // StoreModule.forFeature('posts', postsReducer)
   ],
   declarations: [
     PostsListComponent,

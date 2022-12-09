@@ -1,4 +1,3 @@
-import { CounterModule } from './counter/counter.module';
 import { NgModule, isDevMode } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -11,7 +10,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './shared/components/header/header.component';
 import { appReducer } from './state/app.reducer';
-import { PostsModule } from './posts/posts.module';
 
 @NgModule({
   declarations: [
@@ -20,8 +18,6 @@ import { PostsModule } from './posts/posts.module';
     HeaderComponent,
   ],
   imports: [
-    CounterModule,
-    PostsModule,
     ReactiveFormsModule,
     BrowserModule,
     AppRoutingModule,
@@ -38,4 +34,5 @@ import { PostsModule } from './posts/posts.module';
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }

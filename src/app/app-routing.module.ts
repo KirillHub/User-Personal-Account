@@ -3,14 +3,27 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
+
   {
     path: '', component: HomeComponent
   },
+  {
+    path: 'counter',
+    loadChildren: () => import('./counter/counter.module').then(module => module.CounterModule)
+  },
+  {
+    path: 'posts',
+    loadChildren: () => import('./posts/posts.module').then(module => module.PostsModule)
+  },
+
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  imports: [
+    RouterModule.forRoot(routes)
+  ],
+  exports: [RouterModule],
+  providers: []
 })
 
 export class AppRoutingModule { }
@@ -32,3 +45,4 @@ export class AppRoutingModule { }
   ]
 }
 */
+

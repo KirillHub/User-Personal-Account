@@ -3,15 +3,19 @@ import { CounterButtonsComponent } from './counter-buttons/counter-buttons.compo
 import { NgModule } from "@angular/core";
 import { CounterComponent } from './counter/counter.component';
 import { CounterOutputComponent } from './counter-output/counter-output.component';
-import { BrowserModule } from '@angular/platform-browser';
 import { CustomCounterInputComponent } from './custom-counter-input/custom-counter-input.component';
+import { CommonModule } from '@angular/common';
+import { RouterModule} from '@angular/router';
 import { CounterRoutingModule } from './counter-routing.module';
+
 
 @NgModule({
   imports: [
+    CommonModule,
+    RouterModule,
     FormsModule,
-    BrowserModule,
-    CounterRoutingModule
+    CounterRoutingModule,
+    // StoreModule.forFeature('counter', counterReducer)
   ],
   declarations: [
     CounterButtonsComponent,
@@ -22,10 +26,9 @@ import { CounterRoutingModule } from './counter-routing.module';
   exports: [
     CounterButtonsComponent,
     CounterComponent,
-    CounterOutputComponent
+    CounterOutputComponent,
+    CustomCounterInputComponent
   ],
 })
 
-export class CounterModule {
-
-}
+export class CounterModule { }

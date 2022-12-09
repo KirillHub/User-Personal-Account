@@ -1,10 +1,11 @@
+
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { CounterComponent } from './counter/counter.component';
 
 const routes: Routes = [
   {
-    path: 'counter',
+    path: '',
     component: CounterComponent,
   }
 ];
@@ -15,5 +16,6 @@ const routes: Routes = [
 })
 
 export class CounterRoutingModule { }
+
 
 
