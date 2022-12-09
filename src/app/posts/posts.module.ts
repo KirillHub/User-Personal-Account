@@ -7,6 +7,7 @@ import { EditPostComponent } from "./edit-post/edit-post.component";
 import { PostsListComponent } from "./posts-list/posts-list.component";
 import { PostsRoutingModule } from "./posts-routing.module";
 import { postsReducer } from "./state/posts.reducer";
+import { POSTS_STATE_NAME } from "./state/posts.selectors";
 
 @NgModule({
   imports: [
@@ -14,18 +15,14 @@ import { postsReducer } from "./state/posts.reducer";
     FormsModule,
     ReactiveFormsModule,
     PostsRoutingModule,
-    // StoreModule.forFeature('posts', postsReducer)
+    StoreModule.forFeature(POSTS_STATE_NAME, postsReducer)
   ],
   declarations: [
     PostsListComponent,
     AddPostComponent,
     EditPostComponent
   ],
-  exports: [
-    PostsListComponent,
-    AddPostComponent,
-    EditPostComponent
-  ],
+  exports: [],
 })
 
 export class PostsModule { }

@@ -22,7 +22,7 @@ import { appReducer } from './state/app.reducer';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    StoreModule.forRoot(appReducer),
+    StoreModule.forRoot({}),
     // StoreModule.forRoot(reducers, {
     //   metaReducers
     // }),

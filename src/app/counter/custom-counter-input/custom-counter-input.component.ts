@@ -1,10 +1,8 @@
-import { COUNTER_KEY } from './../state/counter.selectors';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
 import { selectTextContent } from '../state/counter.selectors';
 import { setCounter, setTextInfo } from '../state/counter.actions';
-import { TCounterState } from '../state/counter.state';
 import { TAppState } from 'src/app/state/app.state';
 
 @Component({
