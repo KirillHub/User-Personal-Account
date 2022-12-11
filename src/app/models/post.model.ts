@@ -1,6 +1,6 @@
 
 export interface TPost {
-  id?: number
+  id?: any
   title: string
   description: string
 }
